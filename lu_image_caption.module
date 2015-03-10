@@ -1,0 +1,32 @@
+<?php
+/**
+* @file
+* Image Captioner Module 
+* Requires javascript enabled on administrators browser
+* Adds a caption to images with 'caption' as the class
+* Caption is taken from image html title attribute
+* @author Tove Tronslien
+* @contact tove.tronslien@lakeheadu.ca
+*/
+
+/**
+ * Implementation of hook_wysiqyg_plugin
+ * Insert Image Caption
+ */
+
+function lu_image_caption_wysiwyg_plugin($editor, $version) {
+	switch ($editor) {
+		case 'ckeditor':
+    		return array(
+      			'lu_image_caption' => array(
+      			'url' => 'https://lakeheadu.ca',
+       			'path' => drupal_get_path('module', 'lu_image_caption').'/ckeditor',
+         		'load' => TRUE,
+      			'buttons' => array(
+      				'lu_image_caption' => t('Insert Image Caption'),
+       			),
+    		),
+    	);
+		break;
+  	}
+ }

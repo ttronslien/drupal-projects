@@ -1,0 +1,8 @@
+name = "Lakehead University Insert Image Caption"
+description = "Provides a caption for images from the image title attribute."
+core = 7.x
+
+version = "7.x-1.0"
+core = "7.x"
+package = "Lakehead University"
+datestamp = "1303893715"
